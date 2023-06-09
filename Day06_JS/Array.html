@@ -1,0 +1,22 @@
+
+<html>
+    <script>
+       Array.prototype.Arraysort = function() {
+       
+ 
+  this.sort(function(a, b) {
+    console.log(a,b)
+    return a - b;
+  });
+
+  var smallest= this[1]; 
+
+  return smallest;
+};
+
+var arr = prompt("Enter elements of the array");
+var arr = arr.split(" ");
+var smallest = arr.Arraysort();
+console.log(smallest);
+    </script>
+</html>
