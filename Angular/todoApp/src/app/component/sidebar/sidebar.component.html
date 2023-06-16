@@ -1,0 +1,14 @@
+<header>
+    <nav>
+      <ul class="vertical-menu">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/profile">Profile</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <input type="text" placeholder="search">
+        <li style="margin-top: 30rem;">
+            <button *ngIf="!loggedIn" (click)="login()">Login</button>
+            <button *ngIf="loggedIn" (click)="logout()">Logout</button>
+          </li>
+      </ul>
+    </nav>
+  </header>

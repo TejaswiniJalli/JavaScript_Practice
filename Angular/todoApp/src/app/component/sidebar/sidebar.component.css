@@ -1,0 +1,23 @@
+
+  
+  .vertical-menu {
+    height: 100%;
+    position: fixed;
+    padding-top: 60px;
+    background-color: blue;
+    color: white;
+  
+  }
+  
+  .vertical-menu li {
+    margin-right: 10px;
+  }
+  
+  .vertical-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  
+  

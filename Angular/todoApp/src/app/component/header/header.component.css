@@ -1,0 +1,24 @@
+header {
+    background-color: blue;
+    color: white;
+  }
+  
+  .horizontal-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .horizontal-menu li {
+    margin-right: 10px;
+  }
+  
+  .horizontal-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  
+  
