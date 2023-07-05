@@ -1,0 +1,67 @@
+<div class="container">
+  <form>
+    <div class="row mb-2">
+      <div class="col-md-3">
+        <label for="inputState">Technology</label>
+        <select id="inputState" class="form-control">
+          <option>Java</option>
+          <option>Devops</option>
+          <option>SalesForce</option>
+          <option>Data Engineering</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="inputState">Lead Name</label>
+        <select id="inputState" class="form-control">
+          <option selected>Vinay</option>
+          <option>Tejan</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-primary mt-4">Search</button>
+      </div>
+      <div class="col-md-3">
+        <!-- <button type="submit" class="btn btn-info mt-4">Add Submission</button> -->
+        <button type="button" class="btn btn-primary mt-4" (click)="openModal()">Add Submission</button>
+
+      </div>
+    </div>
+  </form>
+  <table class="table table-responsive table-hover">
+    <thead>
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Date</th>
+        <th scope="col">Client</th>
+        <th scope="col">Vendor</th>
+        <th scope="col">Lead</th>
+        <th scope="col">Implementation</th>
+        <th scope="col">Submitted</th>
+        <th scope="col">Edit/Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Tejaswini Jalli</td>
+        <td>tejaswinijalli.id@gmail.com</td>
+        <td>9402901990</td>
+        <td>7/5/2023</td>
+        <td>cei</td>
+        <td>Sage</td>
+        <td>Vinay Kumar</td>
+        <td>Tanisha Systems</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-warning btn-sm">Edit</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

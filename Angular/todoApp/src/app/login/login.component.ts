@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+
 
 
 @Component({
@@ -8,19 +10,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email:string="";
-  psw:string="";
-
-  constructor(private router: Router) { }
-
-  redirectToProfile() {
-   const userDetails:any= localStorage.getItem("users");
-   if (
-    this.email == JSON.parse(userDetails).email &&
-    this.psw == JSON.parse(userDetails).psw
-  ) {
-    this.router.navigate(['/profile']);
-  } 
+  loginInfo = {
+    email: '',
+    pwd: ''
   }
 
+  isUserLoggedIn = false;
+  constructor(private router: Router, private aService: AuthService) { }
+
+  ngOnInit() {
+    console.log('aService', this.aService.isLoggedIn);
+    
+  }
+
+  redirectToProfile() {
+    if (this.loginInfo.email === 'a@a.com' &&
+    this.loginInfo.pwd === '12345') {
+      console.log('user Authenticatesd');
+      this.aService.isLoggedIn = true;
+      this.router.navigate(['/profile']);
+  } else {
+    console.log('user NOT Authenticatesd');
+    this.aService.isLoggedIn = false;
+   alert('InValid details!!!')
+  }
+
+}
 }

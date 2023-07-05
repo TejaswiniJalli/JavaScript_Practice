@@ -9,6 +9,8 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     SignupComponent,
     LoginComponent,
     ProfileComponent,
+    
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
